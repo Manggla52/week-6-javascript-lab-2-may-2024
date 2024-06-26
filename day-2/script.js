@@ -30,12 +30,13 @@ function partOneB () {
   if (guessNumber ===  answer){
       
  // 2. if it is, set the message for correct.
-    messageParagraph.innerHTML = `You've guessed the number ${anser}! You are Right!!!`;
+    messageParagraph.innerHTML = `You've guessed the number ${answer}! You are Correct!!!`;
  
     // 3. if not, set the message for wrong guess.
 } else {
-  messageParagraph.innerHTML = `Your answer is incorrect...${answer} `;
-  messageParagraph.innerHTML = `is the wrong number...`;
+  messageParagraph.innerHTML = `Your answer is incorrect...${answer} is the wrong number... `;
+
+}
 }
 
 
@@ -58,8 +59,8 @@ function partTwoA () {
     // 4. if not, set the message for correct.
     messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
   }
-
 }
+
 
 // Try it!
 function partTwoB () {
@@ -80,11 +81,11 @@ function partTwoB () {
   
     // 4. if not, set the message for correct.
    }  else {
-      messageParagraph.innerHTML = `${answer} is the correct anwser!!!`;
+      messageParagraph.innerHTML = `${Number(guess)} is the correct anwser!!!`;
 
+  }
 }
-    }
-}
+
 
 // Example
 // Mood checker
@@ -112,17 +113,31 @@ function partThreeB () {
   let color;
   color = prompt("What color describes your mood today?");
   // 1. check for your first color
+        if (color === black){
+
 
     // 2. give the message for this color
-
+          messageParagraph.innerHTML = `${color}: Tense, nervous, stressed, or broken`;
+       
   // 3. check for the next color
+        } else if (color === purple) {
 
     // 4. give the message for the next color
-    
+         messageParagraph.innerHTML = `${color}: Mysterious, noble, glamorous, tranquil, introspective`; 
+        
   // 5. otherwise, ask for another color
-
+        } else if (color === red) {
+          messageParagraph.innerHTML = `${color}:Passionate, energetic, excited, love`;
+        } else if (color === yellow) {
+          messageParagraph.innerHTML = `${color}:Anxious, excited, hopeful, joyous`;
+        } else if (color === green) {
+          messageParagraph.innerHTML = `${color}:Average, happy, balanced, harmonious`;
+        } else if (color === blue) {
+          messageParagraph.innerHTML = `${color}: Calm, relaxed, wise, peaceful`;
+        } else {
+          messageParagraph.innerHTML = `Sorry, but were updating more color now...`
+        }
 }
-
 // Example
 // Rock Paper Scissors
 function partFourA () {
