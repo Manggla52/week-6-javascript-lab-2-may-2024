@@ -179,9 +179,8 @@ function partFourB () {
                      }else if (playerOne === "scissors" && playerTwo === "paper"){
                                messageParagraph.innerHTML = `Player One Wins!!!`;
                                messageParagraph.innerHTML = `Scissors Cut Paper`;
-                     }else  {
+                     }else { playerOne === "paper" && playerTwo === "scissors" 
                                messageParagraph.innerHTML = `Player Two Wins!!!`;
                                messageParagraph.innerHTML = `Scissors Cut Paper!`;
                      }
-                    }
-                
+}
