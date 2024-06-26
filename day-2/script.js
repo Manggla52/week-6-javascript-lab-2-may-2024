@@ -27,12 +27,17 @@ function partOneB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is equal to the answer
-
-    // 2. if it is, set the message for correct.
-
+  if (guessNumber ===  answer){
+      
+ // 2. if it is, set the message for correct.
+    messageParagraph.innerHTML = `You've guessed the number ${anser}! You are Right!!!`;
+ 
     // 3. if not, set the message for wrong guess.
-
+} else {
+  messageParagraph.innerHTML = `Your answer is incorrect...${answer} `;
+  messageParagraph.innerHTML = `is the wrong number...`;
 }
+
 
 // Example
 // guess the number with a hint of higher or lower
@@ -64,13 +69,21 @@ function partTwoB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
+  if (guessNumber > answer){
 
     // 2. if it is, set the message for too low.
-
+     messageParagraph.innerHTML = `I'm said to say, that your guess ${guess}is too low...`;
+  
     // 3. if not, set the message for too high.
-
+  } else if (guessNumber < answer){
+     
+  
     // 4. if not, set the message for correct.
+   }  else {
+      messageParagraph.innerHTML = `${answer} is the correct anwser!!!`;
 
+}
+    }
 }
 
 // Example
@@ -127,12 +140,33 @@ function partFourA () {
 }
 
 // Try it!
-// Can you implement Rock Paper Scissors?
-// How many options are there?
+// Can you implement Rock Paper Scissors? 2 players with conditions
+// How many options are there? 6
 // NOTE: If you miss some of the options, that's OK. 
 // Try to catch as many as you can.
 function partFourB () {
   alert("Try it!");
-
-}
-
+                        //Paper Covers Rock
+                        if (playerOne === "paper" && playerTwo === "rock"){
+                            messageParagraph.innerHTML = `Player One Wins!!!`;
+                            messageParagraph.innerHTML = `Paper covers Rock!`;
+                     }else if (playerOne === "rock" && playerTwo === "paper"){
+                               messageParagraph.innerHTML = `Player Two Wins!!!`;
+                               messageParagraph.innerHTML = `Paper covers Rock!`;
+                               //Rock Smashes Scissors
+                     }else if (playerOne === "scissors" && playerTwo === "rock"){
+                               messageParagraph.innerHTML = `Player Two Wins!!!`;
+                               messageParagraph.innerHTML = `Rock smashes Scissors !`;
+                     }else if (playerOne === "rock" && playerTwo === "scissors"){
+                               messageParagraph.innerHTML = `Player One Wins!!!`;
+                               messageParagraph.innerHTML = `Rock smashes Scissors!`;
+                               //Scissors Cut Paper
+                     }else if (playerOne === "scissors" && playerTwo === "paper"){
+                               messageParagraph.innerHTML = `Player One Wins!!!`;
+                               messageParagraph.innerHTML = `Scissors Cut Paper`;
+                     }else  {
+                               messageParagraph.innerHTML = `Player Two Wins!!!`;
+                               messageParagraph.innerHTML = `Scissors Cut Paper!`;
+                     }
+                    }
+                
