@@ -1,4 +1,3 @@
-
 // Example
 // Guess the number
 function partOneA () {
@@ -27,19 +26,15 @@ function partOneB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is equal to the answer
-  if (guessNumber ===  answer){
-      
- // 2. if it is, set the message for correct.
-    messageParagraph.innerHTML = `You've guessed the number ${answer}! You are Correct!!!`;
- 
+  if (guessNumber === answer){
+   
+   // 2. if it is, set the message for correct.
+
+       messageParagraph.innerHTML = `You've guessed the number!${answer} You are Right!!!`;
     // 3. if not, set the message for wrong guess.
-} else {
-  messageParagraph.innerHTML = `Your answer is incorrect...${answer} is the wrong number... `;
-
+  } else {messageParagraph.innerHTML = `You've guessed incorrectly...The answer, is not ${answer}!`;
 }
 }
-
-
 // Example
 // guess the number with a hint of higher or lower
 function partTwoA () {
@@ -49,7 +44,7 @@ function partTwoA () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
-  if(guessNumber < answer) {
+  if (guessNumber < answer) {
     // 2. if it is, set the message for too low.
     messageParagraph.innerHTML = `Your guess is too low. Try again.`;
   } else if (guessNumber > answer) {
@@ -59,8 +54,8 @@ function partTwoA () {
     // 4. if not, set the message for correct.
     messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
   }
-}
 
+}
 
 // Try it!
 function partTwoB () {
@@ -81,11 +76,9 @@ function partTwoB () {
   
     // 4. if not, set the message for correct.
    }  else {
-      messageParagraph.innerHTML = `${Number(guess)} is the correct anwser!!!`;
-
-  }
+      messageParagraph.innerHTML = `${answer} is the correct anwser!!!`;
 }
-
+}  
 
 // Example
 // Mood checker
@@ -100,87 +93,108 @@ function partThreeA () {
   } else if(color === "yellow") {
     // 4. give the message for yellow
     messageParagraph.innerHTML = `You must being have a good day!`;
-  } else {
-    // 5. otherwise, ask for another color
-    messageParagraph.innerHTML = `Try another color.`;
   }
 }
+  function partThreeB(){
+    // Try it!
+    // Try with some other colors.
+    // For ideas check https://99designs.com/blog/tips/how-color-impacts-emotions-and-behaviors/
+    // 5. otherwise, ask for another color
+   // messageParagraph.innerHTML = `Try another color.`;
 
-// Try it!
-// Try with some other colors. 
-// For ideas check https://99designs.com/blog/tips/how-color-impacts-emotions-and-behaviors/
-function partThreeB () {
   let color;
-  color = prompt("What color describes your mood today?");
-  // 1. check for your first color
-        if (color === black){
 
-
-    // 2. give the message for this color
-          messageParagraph.innerHTML = `${color}: Tense, nervous, stressed, or broken`;
-       
-  // 3. check for the next color
-        } else if (color === purple) {
-
-    // 4. give the message for the next color
-         messageParagraph.innerHTML = `${color}: Mysterious, noble, glamorous, tranquil, introspective`; 
-        
-  // 5. otherwise, ask for another color
-        } else if (color === red) {
-          messageParagraph.innerHTML = `${color}:Passionate, energetic, excited, love`;
-        } else if (color === yellow) {
-          messageParagraph.innerHTML = `${color}:Anxious, excited, hopeful, joyous`;
-        } else if (color === green) {
-          messageParagraph.innerHTML = `${color}:Average, happy, balanced, harmonious`;
-        } else if (color === blue) {
-          messageParagraph.innerHTML = `${color}: Calm, relaxed, wise, peaceful`;
-        } else {
-          messageParagraph.innerHTML = `Sorry, but were updating more color now...`
-        }
+  color = prompt("Type in your favorit color and I will tell you it's meaning!")
+         if (color === "black") {
+                     messageParagraph.innerHTML = `Black is the color of protection, power, elegance, and sophistication.`;
+  } else if (color === "red") {
+                     messageParagraph.innerHTML =`Red is the color of action, strength, energy, and passion.`;
+  } else if (color === "orange") {
+                     messageParagraph.innerHTML =`Orange is the color of emotion, youth, optimism, and enthusiasm.`;
+  } else if (color === "green") {
+                     messageParagraph.innerHTML =`Green is the color of harmony, safety, growth, and health.`;
+  } else if (color === "purple") {
+                     messageParagraph.innerHTML =`Purple is the color of spirituality, mystery, royalty, and imagination.`;
+  } else if (color === "pink") {
+                     messageParagraph.innerHTML =`Pink is the color of compassion, love, femininity, and playfulness.`;
+  } else if (color === "white") {
+                     messageParagraph.innerHTML =`White is the color of cleanliness, purity, innocence, and perfection.`;
+  } else if (color === "grey") {
+                     messageParagraph.innerHTML =`Gray: Represents neutrality, balance, and practicality. It’s a color of compromise and stability`;
+  } else if (color === "indigo") {
+                     messageParagraph.innerHTML =`Indigo: Symbolizes intuition, wisdom, and inner knowing. It’s associated with the third eye chakra`;
+  } else if (color === "brown") {
+                     messageParagraph.innerHTML =`Brown: Symbolizes earthiness, stability, and reliability. It’s connected to nature and the physical world.`;
+  } else if (color === "silver") {
+                     messageParagraph.innerHTML =`Silver: Signifies intuition, reflection, and emotional balance. It’s often linked to the moon and feminine energy`;
+  } else if (color === "turquoise") {
+                     messageParagraph.innerHTML =`Turquoise: Represents healing, communication, and protection. It’s a color of spiritual growth`;
+  } else if (color === "yellow") {
+    messageParagraph.innerHTML =`Yellow is the color of happiness, optimism, positivity, and intellect.`;
+} else if (color === "blue") {
+  messageParagraph.innerHTML =`Blue is the color of security, trust, loyalty, and responsibility.`;
 }
+
+  }
+
+
+
+
+
+
 // Example
 // Rock Paper Scissors
-function partFourA () {
-  let playerOne, playerTwo;
-  playerOne = prompt("Player One, choose rock, paper, or scissors.");
-  playerTwo = prompt("Player Two, choose rock, paper, or scissors.");
-  if(playerOne === "rock" && playerTwo === "paper"){
-    messageParagraph.innerHTML = "Player Two wins!";
-  } else if (playerOne === "scissors" && playerTwo === "rock") {
-    messageParagraph.innerHTML = "Player Two wins!";
-  } else {
-    messageParagraph.innerHTML = "It's a tie!";
-  }
+//function partFourA () {
+ // let playerOne, playerTwo;
+ // playerOne = prompt("Player One, choose rock, paper, or scissors.");
+ // playerTwo = prompt("Player Two, choose rock, paper, or scissors.");
+ // if(playerOne === "rock" && playerTwo === "paper"){
+   // messageParagraph.innerHTML = "Player Two wins!";
+ // } else if (playerOne === "scissors" && playerTwo === "rock") {
+  //  messageParagraph.innerHTML = "Player Two wins!";
+ // }// else {
+   // messageParagraph.innerHTML = "It's a tie!";
+
   // NOTE: This is not a complete game. You need to figure out all the possible outcomes for it to work properly.
-}
+//}
 
 // Try it!
-// Can you implement Rock Paper Scissors? 2 players with conditions
-// How many options are there? 6
+// Can you implement Rock Paper Scissors?
+// How many options are there?
 // NOTE: If you miss some of the options, that's OK. 
 // Try to catch as many as you can.
-function partFourB () {
+function partFourB (){
   alert("Try it!");
-                        //Paper Covers Rock
-                        if (playerOne === "paper" && playerTwo === "rock"){
-                            messageParagraph.innerHTML = `Player One Wins!!!`;
-                            messageParagraph.innerHTML = `Paper covers Rock!`;
-                     }else if (playerOne === "rock" && playerTwo === "paper"){
-                               messageParagraph.innerHTML = `Player Two Wins!!!`;
-                               messageParagraph.innerHTML = `Paper covers Rock!`;
-                               //Rock Smashes Scissors
-                     }else if (playerOne === "scissors" && playerTwo === "rock"){
-                               messageParagraph.innerHTML = `Player Two Wins!!!`;
-                               messageParagraph.innerHTML = `Rock smashes Scissors !`;
-                     }else if (playerOne === "rock" && playerTwo === "scissors"){
-                               messageParagraph.innerHTML = `Player One Wins!!!`;
-                               messageParagraph.innerHTML = `Rock smashes Scissors!`;
-                               //Scissors Cut Paper
-                     }else if (playerOne === "scissors" && playerTwo === "paper"){
-                               messageParagraph.innerHTML = `Player One Wins!!!`;
-                               messageParagraph.innerHTML = `Scissors Cut Paper`;
-                     }else if  (playerOne === "paper" && playerTwo === "scissors"){ 
-                               messageParagraph.innerHTML = `Player Two Wins!!!`;
-                               messageParagraph.innerHTML = `Scissors Cut Paper!`;
-                     }
-}
+   let playerOne, playerTwo;
+   playerOne = prompt("Player One, choose either rock, paper, or scissors.");
+   playerTwo = prompt("Player Two, choose  either rock, paper, or scissors.");
+                      //The Tie
+                 if  (playerOne === playerTwo){
+                      messageParagraph.innerHTML = `It's a Tie!!!`;
+           // }else if (playerOne === "rock" && playerTwo == "rock"){
+           //           messageParagraph.innerHTML = `it's a Tie!!!`;
+           // }else if (playerOne === "scissors" && playerTwo === "scissors"){
+                      messageParagraph.innerHTML = `it's a Tie!!!`; 
+                      //Paper v.s Pock      
+            }else if (playerOne === "paper" && playerTwo === "rock"){
+                      messageParagraph.innerHTML = `Player One Wins!!!`;
+             
+            }else if (playerOne === "rock" && playerTwo === "paper"){
+                      messageParagraph.innerHTML = `Player Two Wins!!!`;
+                     //Rock v.s Scissors
+            }else if (playerOne === "scissors" && playerTwo === "rock"){
+                      messageParagraph.innerHTML = `Player Two Wins!!!`;
+                    
+            }else if (playerOne === "rock" && playerTwo === "scissors"){
+                      messageParagraph.innerHTML = `Player One Wins!!!`;
+                    //Scissors v.s Paper
+            }else if (playerOne === "scissors" && playerTwo === "paper"){
+                      messageParagraph.innerHTML = `Player One Wins!!!`;
+                  
+            }else if (playerOne === "paper" && playerTwo === "scissors") {
+                      messageParagraph.innerHTML = `Player Two Wins!!!`;
+                    
+            }
+            }
+    
+      
