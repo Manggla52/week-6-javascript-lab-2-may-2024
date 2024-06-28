@@ -17,18 +17,19 @@ function partOneA () {
 
 // Try It!
 function partOneB () {
-  alert("Try it!");
+//  alert("Try it!");
   let friends 
   friends = [];
   // 1. TODO: Add your own friends to the array
-  friend[5] = "Alex";
-  friend[6] = "Tisha";
-  friend[7] = "Cindy";
-  friend[8] = "Brenda";
-  friend[9] = "Toya";
+  friends[0] = "Alex";
+  friends[1] = "Tisha";
+  friends[2] = "Cindy";
+  friends[3] = "Brenda";
+  friends[4] = "Toya";
+  friends[5] = "vicky";
 
   // 2. TODO: write your friends to the message
-messageParagraph.innerHTML = `My top friends are ${friend[5]}, ${friend[6]}, ${friend[7]}, ${friend[8]}, and ${friend[9]}.`;
+messageParagraph.innerHTML = `My top friends are ${friends[0]}, ${friends[1]}, ${friends[2]}, ${friends[3]}, ${friends[4]} and ${friends[5]}.`;
 }
 
 // Example
@@ -36,24 +37,20 @@ messageParagraph.innerHTML = `My top friends are ${friend[5]}, ${friend[6]}, ${f
 function partTwoA () {
   let friends = [];
   // 1. Add your friends to the array
-  friend[0] = "Andy";
-  friend[1] = "Betty";
-  friend[2] = "Cathy";
-  friend[3] = "Danna";
-  friend[4] = "Edward";
-  friend[5] = "Alex";
-  friend[6] = "Tisha";
-  friend[7] = "Cindy";
-  friend[8] = "Brenda";
-  friend[9] = "Toya";
+  friends[0] = "Andy";
+  friends[1] = "Betty";
+  friends[2] = "Cathy";
+  friends[3] = "Danna";
+  friends[4] = "Edward";
+
 
   // 2. write your friends to the innerHTML of the document
   messageParagraph.innerHTML = "Your friends are ";
-  messageParagraph.innerHTML += `${friend[0]}`;
-  messageParagraph.innerHTML += `, ${friend[1]}`;
-  messageParagraph.innerHTML += `, ${friend[2]}`;
-  messageParagraph.innerHTML += `, ${friend[3]}`;
-  messageParagraph.innerHTML += `, ${friend[4]}`;
+  messageParagraph.innerHTML += `${friends[0]}`;
+  messageParagraph.innerHTML += `, ${friends[1]}`;
+  messageParagraph.innerHTML += `, ${friends[2]}`;
+  messageParagraph.innerHTML += `, ${friends[3]}`;
+  messageParagraph.innerHTML += `, ${friends[4]}`;
 
 }
 
@@ -61,19 +58,20 @@ function partTwoA () {
 function partTwoB () {
   let friends = [];
   // 1. Add your friends to the array
-  friend[5] = "Alex";
-  friend[6] = "Tisha";
-  friend[7] = "Cindy";
-  friend[8] = "Brenda";
-  friend[9] = "Toya";
-
+  friends[0] = "Alex";
+  friends[1] = "Tisha";
+  friends[2] = "Cindy";
+  friends[3] = "Brenda";
+  friends[4] = "Toya";
+  friends[5] = "vicky";
   // 2. write your friends to the innerHTML of the document
 messageParagraph.innerHTML = "My friends are";
-messageParagraph.innerHTML += `, ${friend[5]}`;
-messageParagraph.innerHTML += `, ${friend[6]}`;
-messageParagraph.innerHTML += `, ${friend[7]}`;
-messageParagraph.innerHTML += `, ${friend[8]}`;
-messageParagraph.innerHTML += `, ${friend[9]}`;
+messageParagraph.innerHTML += ` ${friends[0]}`;
+messageParagraph.innerHTML += `, ${friends[1]}`;
+messageParagraph.innerHTML += `, ${friends[2]}`;
+messageParagraph.innerHTML += `, ${friends[3]}`;
+messageParagraph.innerHTML += `, ${friends[4]}`;
+messageParagraph.innerHTML += `, ${friends[5]}`;
 
 
 }
@@ -85,7 +83,7 @@ function partThreeA () {
   let friend = prompt("Enter a friend's name.");
 
   // 2. add the friend to the message
-  messageParagraph.innerHTML += `, ${friend}`;
+  messageParagraph.innerHTML += `, ${friend} `;
 }
 
 // Try it!
@@ -95,24 +93,24 @@ function partThreeB () {
   let friend = prompt("Enter name of New Friend.")
 
   // 2. add the friend to the message
-  messageParagraph.innerHTML += `Party at my house: July 4th. ${friend}`;
+  messageParagraph.innerHTML += `${friend}` + ` has been added to your Friends List.`;
 }
 
 // Example
 // Keep all the friends in an array, too.
 let myBestFriends = [];
 function partFourA () {
-  let totalBestFriends, newBestFriend;
+  let totalBestFriends, newBestFriends;
   totalBestFriends = myBestFriends.length;
   // 1. prompt for a friend
-  newBestFriend = prompt(`You have ${totalBestFriends} best friends. To add another, enter a friend's name.`);
+  newBestFriends = prompt(`You have ${totalBestFriends} best friends. To add another, enter a friend's name.`);
 
   // 2. add the friend to the array with push()
-  myBestFriends.push(newBestFriend);
+  myBestFriends.push(newBestFriends);
 
   // 3. add the friend to the message
   // Note: you can use HTML in the string to create HTML elements in the document. 
-  messageList.innerHTML += `<li>${newBestFriend}</li>`;
+  messageList.innerHTML += `<li>${newBestFriends}</li>`;
 
   // 4. log the array to the console for debugging
   // Note: This will show in the Dev Tools
@@ -124,20 +122,21 @@ function partFourA () {
 let myFavFlavors = [];
 function partFourB () {
   alert("Try it!");
-  let totalFavFlavors, newFavFlavor;
+  let totalFavFlavors, newFavFlavors;
   totalFavFlavors = myFavFlavors.length;
 
   // 1. prompt for a flavor
-  myFavFlavors = prompt(`There are ${totalFavFlavors} favorit flavors. Enter the new favorit flavor to add another.`);
+  myFavFlavors = prompt(`There are ${totalFavFlavors} favorit flavors. Enter a new favorit flavor to add another.`);
 
   // 2. add the flavor to the array with push()
-  myFavFlavors.push(newFavFlavor);
+  myFavFlavors.push(newFavFlavors);
 
   // 3. add the flavor to the message
-  messageParagraph.innerHTML = `<li>${newFavFlavor}</li>`;
+  messageParagraph.innerHTML += `<li>${newFavFlavors}</li>`;
 
   // 4. log the array to the console for debugging
-  console.log(newFavFlavor);
+  console.log(myFavflavors);
 
 }
+
 
