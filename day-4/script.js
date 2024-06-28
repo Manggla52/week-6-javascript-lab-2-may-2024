@@ -50,13 +50,17 @@ function partTwoB () {
   messageParagraph.innerHTML = "Flavors";
 
   // 1. Create an array of 5 flavors
+  let friend = ["Alex","Tisha", "Cindy", "Brenda", "Toya", "vicky"]
 
   // 2. Find the length of the array
+  let highNumber = friends.length;
 
   // 3. Create a for loop.
-
+for (let I = 0; I < highNumber; i++){
+ 
     // 4. give the user and alert with the current friend.
-
+     alert(`This friend is ${friends[i]}`);
+ } 
 }
 
 // Example
@@ -82,12 +86,15 @@ function partThreeB () {
 
   alert("Try it!");
   // 1. create an array of 5 flavors
+  let icecreamFlavors = ["Vinilla", "Chocolate", "Rainbow Sherbet", "Grape Ice", "Starbucks Coffee-Cream with Nuts"]
 
   // 2. find the length of the array
+  let highNumber = icedreamFlavors.length;
  
   // 3. create a for loop
-
-    // 4. write the friend to the innerHTML of the list
+for(let i = 0; i < highNumber; i++){
+  messageList.innerHTML += `<li>${icecreamFlavors}</li> `+ `have been add to the inventory list`;
+}    // 4. write the friend to the innerHTML of the list
 }
 
 // Example
@@ -127,17 +134,20 @@ function partFourB () {
 
   // 1. prompt for a flavor
 
+  newFlavor = prompt("Please enter the name of the new flavor.");
   // 2. add the flavor to the array with push()
-
+flavors.push(newFlavor);
   // 3. reset the list in the innerHTML
   messageList.innerHTML = "";
   // 4. set the message to "Flavors"
-  messageParagraph.innerHTML = "Flavors";
+  messageParagraph.innerHTML = `${newFlavor}` + ` has been added to the Inventory List`;
 
   // 5. Get the exact length of the array
   highNumber = flavors.length;
 
   // 6. write all the flavors back to the HTML list from the array, updated with our new flavor.
-
+for (let i = 0; i , highNumber; i++) {
+  messageList.innerHTML += `<li>${newFlavor}</li>`
+}
 }
 

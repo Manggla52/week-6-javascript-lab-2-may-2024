@@ -93,7 +93,7 @@ function partThreeB () {
   let friend = prompt("Enter name of New Friend.")
 
   // 2. add the friend to the message
-  messageParagraph.innerHTML += `${friend}` + ` has been added to your Friends List.`;
+  messageParagraph.innerHTML += `and ${friend}` + ` has been added to your Friends List.`;
 }
 
 // Example
@@ -132,7 +132,7 @@ function partFourB () {
   myFavFlavors.push(newFavFlavors);
 
   // 3. add the flavor to the message
-  messageParagraph.innerHTML += `<li>${newFavFlavors}</li>`;
+  messageParagraph.innerHTML += `<li>${newFavFlavors}</li>`+ `has been added to the Inventory List`;
 
   // 4. log the array to the console for debugging
   console.log(myFavflavors);
